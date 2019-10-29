@@ -35,6 +35,9 @@
     <meta name="title" content="">
     <meta name="description" content="Provide the details of your paper to determine the price, and place your order with stellaressays.com">
     <meta name="keywords" content="Order">
+    <meta name="google-signin-client_id" content="217371982045-irs8bs09bug4ts26jb91eertp6e3hhi3.apps.googleusercontent.com">
+    <meta name="google-signin-cookiepolicy" content="single_host_origin">
+    <meta name="google-signin-scope" content="profile email">
         <link rel="canonical" href="index.html">
     <link href="../img/v2/favicon_stellaressays.png" rel="shortcut icon" type="image/x-icon"/>
         <link href="../css/v2/fontawesome.css" rel="stylesheet">
@@ -42,6 +45,9 @@
             <link rel="stylesheet" href="../css/jquery.qtipf11f.css?v=3.3.27">
         <link rel="stylesheet" href="../css/v2/order_v2f11f.css?v=3.3.27">
         <link rel="stylesheet" href="../css/intlTelInputf11f.css?v=3.3.27">
+
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     </head><body>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
@@ -116,7 +122,7 @@
             </div>
             <div class="tabs-wrp">
                 <span class="form-tab gtm-order-vp active" data-tab="1">Authorize</span>
-                <span class="form-tab gtm-order-vp" data-tab="2">Paper details</span>
+                <span class="form-tab gtm-order-vp" data-tab="2" id="paperDetails">Paper details</span>
                 <span class="form-tab gtm-order-vp" data-tab="3">Options</span>
             </div>
             <div class="img-loader-form main-loader"><img src="../img/v2/loader_v2.gif"></div>
@@ -158,7 +164,14 @@
                                             <div class="mid-column">
                                                 <span class="title">or</span>
                                             </div>
+
                                             <div class="social-btn-wrapper">
+                                                <button class="btn btn-outline-primary btn-lg btn-block" type="button" onclick="GoogleLogin();" style="bottom:10px; border-radius:20px; font-weight:bold;">
+                                                    <span class="fa fa-google"></span>
+                                                    <span class="soc_fb gtm-myaccount-fb">Sign In</span>
+                                                </button> </div>
+                                            <div class="social-btn-wrapper">
+                                                    
                                                 <button id="btn_login_facebook" class="social_login-btn facebook gtm-login-fb" type="button">
                                                     <span class="fa fa-facebook gtm-login-fb"></span>
                                                     <span class="soc_fb gtm-login-fb">Facebook</span>
@@ -185,7 +198,7 @@
                             <div id="logged_in" class="user_logged_in"
                                  style="display: none;">
                                 <p>You are logged in. Please proceed to payment using the link below.</p>
-                                <button type="button" class="action-btn btn-next1">Continue</button>
+                                <button type="button" id="action-btn btn-next1" class="action-btn btn-next1">Continue</button>
                             </div>
                         </div>
                     </div>
@@ -624,6 +637,8 @@
                                 <div class="pay-btn-wrapper">
                                                                             <div class="flex-row pays-place">
                                             <div class="btn-wrap">
+                                                
+                                                <script src="https://www.paypal.com/sdk/js?client-id=Af6QffS355vUtmJzpnvGVoUwByVApPjTrxibKzepIGZeAsZsWeZWHyHVQhT990yzJDWU6h7fLrLdQHNV"></script>
                                                 <div id="paypal-button-container"></div>
                                             </div>
                                             <span class="separane-text">or</span>
@@ -962,6 +977,23 @@
             }
         })()
     </script>
+
+<script>
+       paypal.Buttons().render('#paypal-button-container');
+    </script>
+
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+  
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+      <script src="/js/firebaseOrder.js"></script>
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </body>
 
 </html>

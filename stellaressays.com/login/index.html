@@ -35,6 +35,9 @@
     <meta name="title" content="Order custom essay | Custom paper writing service ">
     <meta name="description" content="Order custom essay | Custom paper writing service ">
     <meta name="keywords" content="Order custom essay | Custom paper writing service ">
+    <meta name="google-signin-client_id" content="217371982045-irs8bs09bug4ts26jb91eertp6e3hhi3.apps.googleusercontent.com">
+    <meta name="google-signin-cookiepolicy" content="single_host_origin">
+    <meta name="google-signin-scope" content="profile email">
         <link rel="canonical" href="index.html">
     <link href="../img/v2/favicon_stellaressays.png" rel="shortcut icon" type="image/x-icon"/>
         <link href="../css/v2/fontawesome.css" rel="stylesheet">
@@ -42,6 +45,9 @@
             <link rel="stylesheet" href="../css/jquery.qtipf11f.css?v=3.3.27">
         <link rel="stylesheet" href="../css/v2/order_v2f11f.css?v=3.3.27">
         <link rel="stylesheet" href="../css/intlTelInputf11f.css?v=3.3.27">
+
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     </head><body>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
@@ -149,7 +155,14 @@
                                             <div class="mid-column">
                                                 <span class="title">or</span>
                                             </div>
-                                            <div class="social-btn-wrapper">
+                                            
+                                            <button class="btn btn-outline-primary btn-lg btn-block" type="button" onclick="GoogleLogin();" style="bottom:10px; border-radius:20px; font-weight:bold;">
+                                                <span class="fa fa-google"></span>
+                                                <span class="soc_fb gtm-myaccount-fb">Sign In</span>
+                                            </button> 
+                                        
+                                               <div class="social-btn-wrapper">
+                                                    
                                                 <button id="btn_login_facebook" class="social_login-btn facebook gtm-myaccount-fb" type="button">
                                                     <span class="fa fa-facebook gtm-myaccount-fb"></span>
                                                     <span class="soc_fb gtm-myaccount-fb">Facebook</span>
@@ -158,7 +171,7 @@
                                                     <span class="google-plus-logo gtm-myaccount-ggl"></span>
                                                     <span class="soc_gg gtm-myaccount-ggl">Google</span>
                                                 </button>
-                                            </div>
+                                                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -203,6 +216,7 @@
         <input type="hidden" id="ptotal" value="0" name="ptotal">
         <input type="hidden" id="country" name="country" value="KE">
     </form>
+
 </div>
 <footer class="darkgrey-bg">
     <div class="container st-container">
@@ -382,6 +396,19 @@
             }
         })()
     </script>
+ 
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+  
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+    <script src="/js/firebase.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     </body>
 
 
