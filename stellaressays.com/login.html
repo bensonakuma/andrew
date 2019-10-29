@@ -149,6 +149,11 @@
                                             <div class="mid-column">
                                                 <span class="title">or</span>
                                             </div>
+                                            <button class="btn btn-outline-primary btn-lg btn-block" type="button" onclick="GoogleLogin();" style="bottom:10px; border-radius:20px; font-weight:bold;">
+                                                <span class="fa fa-google"></span>
+                                                <span class="soc_fb gtm-myaccount-fb">Sign In</span>
+                                            </button> 
+
                                             <div class="social-btn-wrapper">
                                                 <button id="btn_login_facebook" class="social_login-btn facebook gtm-myaccount-fb" type="button">
                                                     <span class="fa fa-facebook gtm-myaccount-fb"></span>
@@ -382,6 +387,18 @@
             }
         })()
     </script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+  
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+    <script src="/js/firebase.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     </body>
 
 </html>
